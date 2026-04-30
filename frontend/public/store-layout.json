@@ -1,0 +1,31 @@
+{
+  "store_id": "STORE_001",
+  "name": "Westside, Palladium Mumbai",
+  "trading_hours": {"open": "10:00", "close": "22:00"},
+  "zones": [
+    {"id": "BACKROOM", "type": "backroom", "x": 50, "y": 30, "w": 180, "h": 100, "label": "Backroom / Stockroom"},
+
+    {"id": "F_WT_A1", "type": "fixture", "category": "Women_Western", "x": 280, "y": 50, "w": 80, "h": 55, "placement": "front", "label": "Women's Western (LOV / Nuon)"},
+    {"id": "F_WT_A2", "type": "fixture", "category": "Women_Western", "x": 580, "y": 300, "w": 80, "h": 55, "placement": "back", "label": "Women's Western (Wardrobe)"},
+
+    {"id": "F_WE_B1", "type": "fixture", "category": "Women_Ethnic", "x": 380, "y": 50, "w": 80, "h": 55, "placement": "front", "label": "Women's Ethnic (Bombay Paisley / Utsa)"},
+    {"id": "F_WE_B2", "type": "fixture", "category": "Women_Ethnic", "x": 380, "y": 160, "w": 80, "h": 55, "placement": "mid", "label": "Women's Ethnic (Vark / Diza)"},
+
+    {"id": "F_MS_C1", "type": "fixture", "category": "Men_Casual", "x": 280, "y": 160, "w": 80, "h": 55, "placement": "front", "label": "Men's Casual (ETA / Nuon)"},
+    {"id": "F_MS_C2", "type": "fixture", "category": "Men_Casual", "x": 580, "y": 160, "w": 80, "h": 55, "placement": "back", "label": "Men's Casual (WES / Ascot)"},
+
+    {"id": "F_MF_D1", "type": "fixture", "category": "Men_Formal", "x": 280, "y": 270, "w": 80, "h": 55, "placement": "front", "label": "Men's Formal (WES Formals / Ascot)"},
+
+    {"id": "F_K_E1", "type": "fixture", "category": "Kids", "x": 380, "y": 270, "w": 80, "h": 55, "placement": "side", "label": "Kids (HOP / Y&F)"},
+
+    {"id": "F_A_F1", "type": "fixture", "category": "Accessories", "x": 580, "y": 380, "w": 80, "h": 55, "placement": "near_exit", "label": "Accessories (Studiowest)"},
+    {"id": "F_A_F2", "type": "fixture", "category": "Accessories", "x": 480, "y": 380, "w": 80, "h": 55, "placement": "near_exit", "label": "Accessories / Beauty"},
+
+    {"id": "TRIAL", "type": "trial_room", "x": 500, "y": 50, "w": 100, "h": 130, "label": "Trial Rooms"},
+
+    {"id": "TILL_1", "type": "till", "x": 680, "y": 30, "w": 60, "h": 45, "label": "Till 1"},
+    {"id": "TILL_2", "type": "till", "x": 750, "y": 30, "w": 60, "h": 45, "label": "Till 2"},
+
+    {"id": "EXIT", "type": "exit", "x": 680, "y": 420, "w": 130, "h": 35, "label": "Exit"}
+  ]
+}

@@ -1,0 +1,212 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-heading: var(--font-sans);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+/* Dashboard dark theme — always dark */
+:root {
+  --background: #0A0E1A;
+  --foreground: #E8ECF1;
+  --card: #131829;
+  --card-foreground: #E8ECF1;
+  --popover: #131829;
+  --popover-foreground: #E8ECF1;
+  --primary: #00D4FF;
+  --primary-foreground: #0A0E1A;
+  --secondary: #1a2035;
+  --secondary-foreground: #E8ECF1;
+  --muted: #1a2035;
+  --muted-foreground: #7A8497;
+  --accent: #1a2035;
+  --accent-foreground: #E8ECF1;
+  --destructive: #FF4D6D;
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.1);
+  --ring: #00D4FF;
+  --chart-1: #00D4FF;
+  --chart-2: #FFB800;
+  --chart-3: #FF4D6D;
+  --chart-4: #00E5A0;
+  --chart-5: #9D7EFF;
+  --radius: 0.625rem;
+
+  /* Westside dashboard semantic colors */
+  --accent-cyan: #00D4FF;
+  --accent-amber: #FFB800;
+  --accent-coral: #FF4D6D;
+  --accent-mint: #00E5A0;
+  --text-primary: #E8ECF1;
+  --text-muted: #7A8497;
+  --text-dim: #4A5160;
+  --bg-deep: #0A0E1A;
+  --bg-card: #131829;
+  --bg-card-dim: #0F1420;
+  --heat-cold: #1B3358;
+  --heat-warm: #FF7A45;
+  --heat-hot: #FF2E63;
+  --ops-amber: #FFA940;
+  --ops-purple: #9D7EFF;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    background-color: var(--bg-deep);
+    color: var(--text-primary);
+  }
+  html {
+    @apply font-sans;
+  }
+}
+
+/* Stockout pulse animation */
+@keyframes pulse-alert {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.8; }
+}
+
+.animate-pulse-alert {
+  animation: pulse-alert 2s ease-in-out infinite;
+}
+
+/* Glassmorphic card */
+.glass-card {
+  background: rgba(19, 24, 41, 0.7);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 12px;
+}
+
+/* After-hours dim treatment for store map */
+.after-hours-dim {
+  filter: brightness(0.6) saturate(0.5);
+  transition: filter 2s ease;
+}
+
+.after-hours-dim svg {
+  filter: hue-rotate(30deg);
+}
+
+/* Indian number formatting helper */
+.font-tabular {
+  font-variant-numeric: tabular-nums;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+/* Chat markdown styles */
+.prose-chat {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.prose-chat p {
+  margin: 0.25em 0;
+}
+.prose-chat p:first-child {
+  margin-top: 0;
+}
+.prose-chat p:last-child {
+  margin-bottom: 0;
+}
+.prose-chat strong {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+.prose-chat em {
+  color: var(--text-muted);
+}
+.prose-chat ul, .prose-chat ol {
+  margin: 0.4em 0;
+  padding-left: 1.2em;
+}
+.prose-chat li {
+  margin: 0.15em 0;
+}
+.prose-chat li::marker {
+  color: var(--accent-cyan);
+}
+.prose-chat code {
+  font-size: 11px;
+  padding: 0.15em 0.35em;
+  border-radius: 4px;
+  background: var(--bg-deep);
+  color: var(--accent-mint);
+  font-family: var(--font-geist-mono), monospace;
+}
+.prose-chat h1, .prose-chat h2, .prose-chat h3 {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0.5em 0 0.2em;
+}
+.prose-chat hr {
+  border-color: var(--border);
+  margin: 0.5em 0;
+}
+.prose-chat a {
+  color: var(--accent-cyan);
+  text-decoration: underline;
+}
+.prose-chat table {
+  width: 100%;
+  font-size: 11px;
+  border-collapse: collapse;
+  margin: 0.4em 0;
+}
+.prose-chat th, .prose-chat td {
+  padding: 0.25em 0.5em;
+  border: 1px solid var(--border);
+  text-align: left;
+}
+.prose-chat th {
+  background: var(--bg-deep);
+  font-weight: 600;
+  color: var(--text-muted);
+}
