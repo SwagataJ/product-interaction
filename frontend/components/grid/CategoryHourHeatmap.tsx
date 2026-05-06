@@ -42,7 +42,7 @@ export default function CategoryHourHeatmap() {
   return (
     <div className="glass-card p-4 overflow-hidden" style={{ maxHeight: "260px" }}>
       <h3 className="text-xs uppercase tracking-wider text-[var(--text-muted)] mb-2">
-        Category x Hour
+        Trial to Buy — Category x Hour
       </h3>
       <div className="overflow-x-auto">
         <table className="border-collapse" style={{ width: "100%" }}>

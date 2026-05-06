@@ -1,6 +1,6 @@
 {
   "store_id": "STORE_001",
-  "name": "Westside, Palladium Mumbai",
+  "name": "Westside, Army Navy Mumbai",
   "trading_hours": {"open": "10:00", "close": "22:00"},
   "zones": [
     {"id": "BACKROOM", "type": "backroom", "x": 50, "y": 30, "w": 180, "h": 100, "label": "Backroom / Stockroom"},

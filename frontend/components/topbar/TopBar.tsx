@@ -4,9 +4,9 @@ import { useStore, type TabId } from "@/lib/store";
 import { Play, Pause, Clock } from "lucide-react";
 
 const TABS: { id: TabId; label: string }[] = [
-  { id: "live_store", label: "Live Store" },
-  { id: "analytics", label: "Analytics" },
   { id: "executive", label: "Executive Summary" },
+  { id: "live_store", label: "Live Store" },
+  { id: "analytics", label: "Product Insights" },
 ];
 
 const SPEEDS = [50, 100, 200, 500];
@@ -19,8 +19,8 @@ export default function TopBar() {
       {/* Store name */}
       <div className="flex items-center gap-3">
         <div className="w-2 h-2 rounded-full bg-[var(--accent-mint)] animate-pulse" />
-        <span className="text-sm font-medium text-[var(--text-primary)]">
-          Westside, Palladium Mumbai
+        <span className="text-base font-semibold tracking-wide text-white" style={{ fontFamily: "var(--font-poppins), sans-serif" }}>
+          Westside, Army Navy Mumbai
         </span>
       </div>
 

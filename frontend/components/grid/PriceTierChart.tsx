@@ -20,7 +20,7 @@ export default function PriceTierChart() {
   return (
     <div className="glass-card p-4" style={{ maxHeight: "260px" }}>
       <h3 className="text-xs uppercase tracking-wider text-[var(--text-muted)] mb-3">
-        Conversion by Price
+        Trial to Buy — Conversion by Price
       </h3>
       <ResponsiveContainer width="100%" height={190}>
         <BarChart data={data} margin={{ top: 4, right: 4, bottom: 0, left: -20 }}>

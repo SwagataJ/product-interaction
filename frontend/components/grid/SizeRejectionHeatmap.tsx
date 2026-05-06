@@ -28,7 +28,7 @@ export default function SizeRejectionHeatmap() {
   return (
     <div className="glass-card p-4">
       <h3 className="text-xs uppercase tracking-wider text-[var(--text-muted)] mb-3">
-        Rejection Rate by Size
+        Trial to Buy — Rejection Rate by Size
       </h3>
       <div className="grid grid-cols-5 gap-1.5">
         {data.map((d) => (

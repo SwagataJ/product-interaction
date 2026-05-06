@@ -51,7 +51,7 @@ export default function ColorPerformance() {
   return (
     <div className="glass-card p-4 overflow-y-auto" style={{ maxHeight: "260px" }}>
       <h3 className="text-xs uppercase tracking-wider text-[var(--text-muted)] mb-3">
-        Color Performance
+        Trial to Buy — Color Performance
       </h3>
       <div className="flex flex-col gap-1">
         {data.map((c, i) => {
